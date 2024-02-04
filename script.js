@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const noButton = document.getElementById('noButton');
     const yesButton = document.getElementById('yesButton');
     const confettiContainer = document.getElementById('confetti-container');
+    const yayMessage = document.getElementById('yayMessage');
 
     noButton.addEventListener('click', function () {
         // No button doesn't do anything
@@ -19,9 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
         
-        // Display an image or any additional content when Yes is clicked
+        // Display confetti image
         const confettiImage = document.createElement('img');
         confettiImage.src = 'confetti_image.jpg'; // Replace with your confetti image
         confettiContainer.appendChild(confettiImage);
+
+        // Display "YAYYY!!!!" message
+        yayMessage.innerHTML = '<p class="yay-text">YAYYY!!!!</p>';
     });
 });
